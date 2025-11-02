@@ -1,0 +1,93 @@
+/* Element selector on the body */
+body{
+    /* font-related styles  */
+
+    /* For font family, we specify multiple typefaces as our backup plan, in case our font fails to load.
+    It's always good to include a generic font-family such as "sans-serif" at the end as our final option. */
+    font-family: Verdana, Arial, sans-serif;
+
+
+    font-size: 1.2rem;
+
+    /* Ideal line height between 1.4-1.6 */
+    line-height: 1.6;
+
+    /* Color styling */
+    color: #333; 
+    background-color: #f5f5f5;
+
+    /* Dimensions */
+    max-width: 60rem;
+    margin: 0 auto; 
+    padding: 2.5rem 1.25rem;
+}
+
+/* Element selector on the header */
+header{
+    text-align: center; 
+
+    /* margin-bottom helps us space out elements */
+    margin-bottom: 1.5rem;
+}
+
+
+/* Element selector on the h1 */
+h1{
+
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.25rem;
+}
+
+/* Element selector on the blockquote */
+blockquote{
+    font-family: Georgia, serif;
+    font-style: italic; 
+    font-size: 1.5rem;
+    text-align: left;
+
+    color: #555;
+
+    /* for border, padding, margin, and many other CSS properties, we can break down the property into different ones based on the side. border-left, border-top, margin-right...etc. */
+    border-left: 7px solid #3498db;
+    padding-left: 1.5rem; 
+    margin: 1.25rem 0; 
+}
+
+
+/* CLASS selector for our "emphasis" class, notice it starts with a dot */
+.emphasis{
+    font-weight: bold; 
+    color: #e74c3c;
+}
+
+
+h2{
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #2c3e50;
+
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* psuedo class ":hover" which is activated when we hover over the selected element, here it is activated when we hover over h2. */
+h2:hover{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+p{
+    color: black;
+    font-size: 1.125rem; 
+    margin-bottom: 1.25rem;
+}
+
+/* ID selector for our "special-paragraph" id, notice it starts with a # sign. */
+#special-paragraph{
+    color: maroon;
+}
+
