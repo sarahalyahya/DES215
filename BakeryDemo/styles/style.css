@@ -1,0 +1,23 @@
+body {
+    background-color: #F5F5F5;  /* Light gray background */
+    color: #333;  /* Dark gray text (almost black, but softer) */
+}
+
+header {
+    background-color: #8B4513;  /* Brown (cookie color!) */
+    color: white;  /* White text on dark background */
+    text-align: center;
+    
+}
+
+#about {
+    background-color: white;
+    color: #333;
+}
+    
+
+footer {
+    background-color: #333;  /* Dark gray */
+    color: white;
+    padding: 2rem;
+}
