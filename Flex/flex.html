@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flexbox</title>
+    
+  </head>
+  <body>
+
+
+  <!-- Example 1: Basic Flexbox. We have a container div (or element), which becomes our FLEX PARENT. This is what gets the display mode: flex.    -->
+  <!-- Flex Parent   -->
+
+ <div class="box-group">
+    <!-- Flex Items -->
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+
+
+<!-- Example 2: Building a navigation bar with flexbox.  -->
+
+
+    <!-- Flex parent -->
+<div class="nav">
+    <!-- flex items -->
+
+    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Contact</a>
+</div>
+
+
+
+<!-- Example 3: Building a hero section with flex.  -->
+<!-- Hero Section -->
+ <!-- flex parent -->
+<div class="hero">
+    <!-- flex items -->
+     <!-- We will use flexbox to center these items.  -->
+    <h1>Welcome to our page</h1>
+    <p>We make websites</p>
+</div>
+
+
+<!-- Example 4: building a services section with flex.  -->
+<!-- Cards -->
+
+ <!-- flex parent -->
+    <div class="cards">
+
+        <!-- flex items -->
+        <div class="card">
+            <h3>Service 1</h3>
+            <p> Description of Service 1</p>
+        </div>
+        <div class="card">
+            <h3>Service 2</h3>
+            <p> Description of Service 2</p>
+        </div>
+        <!-- Here, i'm giving a card its own id because I want to make it bigger using flexbox styling properties.  -->
+        <div class="card" id="bigger-card">
+            <h3>Service 3</h3>
+            <p> Description of Service 3</p>
+        </div>
+
+        <div class="card">
+            <h3>Service 4</h3>
+            <p> Description of Service 4</p>
+
+        </div>
+
+    </div>
+
+  </body>
+</html>
