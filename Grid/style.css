@@ -1,0 +1,153 @@
+/* The * is a universal selector, it affects everything on the page. Here, I'm using it to reset margins. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background: #f5f5f5;
+}
+
+
+/* Example 1 */
+/* Grid parent */
+.container {
+  /* Turning on display grid, defining gap, and number of columns. The three essentials for building your CSS grid! */
+
+  display: grid;
+  gap: 1rem;
+
+  /* Reminder that fr is a relative grid unit, which means "fraction of the grid" */
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 6rem;
+}
+
+
+/* Basic card styling, background, padding, border..etc. */
+.card {
+  background: #f5a623;
+  padding: 2rem;
+  border: 2px solid #333;
+  text-align: center;
+}
+
+.grid-header {
+  /* Here, we're defining which cells the header takes up in our grid. 
+  We are telling the browser to extend our header from line 1, to line -1 (which is always the last line) */
+  grid-column: 1/-1;
+  background: #4a90e2;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.featured {
+    /* Here, we're defining which cells the "featured" section takes up in our grid. 
+    We are telling the browser to extend our header from line 1, to line -1 (which is always the last line) */
+
+  grid-column: 1/-1;
+  background: #7ed321;
+  padding: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+
+  /* Here, we also want to define how much cells the footer takes, but instead of defining specific line numbers, 
+  we are telling the browser "I want my footer to take up 3 columns, or to SPAN 3 columns" */
+  grid-column: span 3;
+  background: #333;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+/* This is the class we created so we can apply it to any card we have that we want to give a 2 column width, such as cards 5 and 7. */
+.card-2-col {
+  grid-column: span 2;
+}
+
+
+/* This is the id we used to define one of our cards as a flexbox. 
+The reason we defined it as a flexbox is to have the text in the card displayed side by side.  */
+#flexbox-card {
+  display: flex;
+  gap: 1rem;
+}
+
+ /* End of example 1! */
+
+
+
+
+
+/* Example 2: Responsive Grid */
+
+/* Again, defining display: grid and gap on the GRID PARENT  */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+
+  /* This is what we do differently from a basic grid.
+   Instead of defining a specific number of columns, we use the "auto-fit" keyword, which calculates the most suitable number of columns for each screen size. 
+   To give the browser some guidance, we define some rules, which are the minimum column size and the maximum column size.
+  In this example, our minimum is 350px, and maximum is 1fr. */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+
+/* Basic styling for our cards */
+.auto-card {
+  background: #bd10e0;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+/* End of example 2! */
+
+
+
+
+/* Example 3: Playing with alignment in our grid.  */
+/* grid parent */
+.align-grid {
+
+  /* Defining display: grid, gap, number of columns and rows.  */
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, 200px);
+  margin-top: 1rem;
+  background: #eee;
+  padding: 1rem;
+
+  /* This is all you need to know for alignment, justify-items, and align-items which align horizontally and vertically.  */
+  /* Defining these on the grid parent, applies this alignment on ALL grid items.  */
+  justify-items: center;
+  align-items: center;
+}
+
+.align-box {
+  background: #50e3c2;
+  border: 2px solid #333;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+}
+
+/* If you have a grid item that you want to align differently, you can use the justify-self and align-self properties as we see below.  */
+#align-box-3 {
+  justify-self: start;
+  align-self: end;
+}
+
+/* End of Example 3 */
