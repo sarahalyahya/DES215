@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Layout Tutorial</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- EXAMPLE 1: working from a sketch layout, grid basics. -->
+    <!-- Grid Parent -->
+    <div class="container">
+      <!-- Grid Items -->
+      <header class="grid-header" id="header-id">Header</header>
+      <div class="card" id="spans-2-col">Card 1</div>
+
+      <!-- Look for the styling on #flexbox-card to see how we made a grid item a flexbox at the same time. -->
+      <div class="card" id="flexbox-card">
+        <h3>Card 2</h3> 
+        <p>blah blah blah</p>
+      </div>
+      <div class="card">Card 3</div>
+      <div class="featured">Featured</div>
+      <div class="card">Card 4</div>
+      <!-- Here, we're using a card-2-col class to give the same styling feature to card 5 and card 7, which is spanning two grid cells. -->
+      <div class="card card-2-col" id="card-5">Card 5</div>
+      <div class="card">Card 6</div>
+      <div class="card card-2-col" id="card-7">Card 7</div>
+      <footer>Footer</footer>
+    </div>
+
+
+
+<!-- EXAMPLE 2: Auto-responsive grids, look at the css to see how we applied some grid keywords to design a grid that changes in size based on the window size. -->
+
+    <h2 style="margin-top: 3rem; text-align: center;">Auto-Responsive Card Grid</h2>
+    <!-- Grid Parent -->
+<div class="card-grid">
+  <!-- grid items -->
+  <div class="auto-card">Card A</div>
+  <div class="auto-card">Card B</div>
+  <div class="auto-card">Card C</div>
+  <div class="auto-card">Card D</div>
+  <div class="auto-card">Card E</div>
+  <div class="auto-card">Card F</div>
+  <div class="auto-card">Card G</div>
+  <div class="auto-card">Card H</div>
+</div>
+
+
+
+<!-- EXAMPLE 3: How do we align items in our grid?  -->
+ 
+    <h2 style="margin-top: 3rem; text-align: center;">Grid Alignment Demo</h2>
+    <!-- Grid Parent -->
+    <div class="align-grid">
+    <!-- Grid Items -->
+  <div class="align-box">1</div>
+  <div class="align-box">2</div>
+  <div class="align-box" id="align-box-3">3</div>
+  <div class="align-box">4</div>
+</div>
+  </body>
+</html>
+
+
+
+
