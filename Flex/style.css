@@ -1,0 +1,138 @@
+
+/* This is styling for the elementDisplay example, which shows the differences between display block, inline, and inline-block. */
+.block-demo div {
+    background: lightblue;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid blue;
+}
+
+.inline-demo span{
+    
+    background: yellow;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid orange;
+    width: 100rem;
+    height: 6rem;
+
+}
+
+.inline-block-demo span{
+    display: inline-block;
+    background: lightcoral;
+    padding: 1rem;
+    margin-left: auto;
+    width: 5rem;
+    height: 2rem;
+    border: 2px solid red;
+    text-align: center;
+}
+
+
+
+
+/* Flexbox */
+
+
+/* Example 1 */
+.box-group{
+    /* This is the flex parent */
+    /* We define display mode flex, the gap, the direction of our flexbox, and align items horizontally and vertically. */
+    display: flex;
+    gap: 5rem; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    /* Styling for flex items */
+    background: lightblue;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 4rem;
+    height: 3rem;
+    border: 2px solid blue;
+    
+  
+    
+}
+
+
+
+/* Example 2: nav bar */
+
+.nav{
+    /* This is the flex parent */
+    /* We define display mode flex, the gap, the direction of our flexbox, and align items. */
+    display: flex; 
+    flex-direction: row;
+    gap: 3rem;
+    background: #333;
+    padding: 1rem;
+    justify-content:center; 
+  
+}
+
+
+ .nav-link{
+    /* flex items styling */
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem; 
+}
+
+.nav-link:hover{
+    background-color: #555;
+}
+
+
+
+
+
+
+/* Example 3: Hero section */
+.hero{
+/* Flex parent, basic styling first. */
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white; 
+    height: 300px; 
+
+/* We define display mode flex, the gap, the direction of our flexbox, and align items. */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* Example 4: Services Cards.  */
+.cards{
+ /* We define display mode flex, the gap, the direction of our flexbox, and align items. */
+    display: flex; 
+    gap: 1.5rem; 
+    padding: 2rem;
+    justify-content: center;
+
+ /* We use flex wrap so that the items don't get super crammed. The browser automatically starts a new flexbox row (or column) when needed.  */
+    flex-wrap: wrap; 
+  
+}
+
+.card{
+    /* basic styling for flex items */
+    background: rgb(251, 239, 239);
+    padding: 1.5rem;
+    border-radius: 8px;
+
+}
+
+
+/* Here, we specify that we want one of our flex items (the one with the #bigger-card id, to take up more of the space of the flexbox.  */
+#bigger-card{
+    flex-grow: 2;
+}
+
+
