@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Scrolling Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Parallax sections - background stays fixed */
+    .parallax {
+      min-height: 500px;
+      background-attachment: fixed;  /* THIS is the magic! */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    /* Dark overlay for readability */
+    .parallax::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .parallax-content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .parallax-content h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+    
+    .parallax-content p {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    
+    /* Different images for each parallax section */
+    .parallax-1 {
+      background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920');
+    }
+    
+    .parallax-2 {
+      background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920');
+    }
+    
+    .parallax-3 {
+      background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920');
+    }
+    
+    /* Regular content sections - these scroll normally */
+    .content-section {
+      padding: 5rem 2rem;
+      background: white;
+    }
+    
+    .content-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .content-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    
+    .content-section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- First parallax section -->
+  <div class="parallax parallax-1">
+    <div class="parallax-content">
+      <h2>Parallax Scrolling</h2>
+      <p>Notice how the background stays in place as you scroll</p>
+    </div>
+  </div>
+
+  <!-- Regular content - scrolls normally -->
+  <div class="content-section">
+    <div class="content-inner">
+      <h2>How It Works</h2>
+      <p>The parallax sections have <code>background-attachment: fixed;</code> which makes the background image stay in place while you scroll.</p>
+      <p>This regular content section scrolls normally over the background, creating a sense of depth and movement.</p>
+      <p>Keep scrolling to see more parallax sections and really notice the effect!</p>
+    </div>
+  </div>
+
+  <!-- Second parallax section -->
+  <div class="parallax parallax-2">
+    <div class="parallax-content">
+      <h2>Different Background</h2>
+      <p>Each section can have a different image</p>
+    </div>
+  </div>
+
+  <!-- More regular content -->
+  <div class="content-section">
+    <div class="content-inner">
+      <h2>The Effect Gets Better</h2>
+      <p>The more you scroll, the more obvious the parallax effect becomes. The background images appear to move at a different speed than the content.</p>
+      <p>This creates visual depth and makes your website feel more dynamic and engaging.</p>
+      <p>Professional sites use this technique to add polish and sophistication.</p>
+    </div>
+  </div>
+
+  <!-- Third parallax section -->
+  <div class="parallax parallax-3">
+    <div class="parallax-content">
+      <h2>One CSS Property</h2>
+      <p>background-attachment: fixed;</p>
+    </div>
+  </div>
+
+  <!-- Final content -->
+  <div class="content-section">
+    <div class="content-inner">
+      <h2>That's Parallax Scrolling!</h2>
+      <p>Scroll back up to the top and watch the backgrounds again. Notice how they stay fixed while the white content sections scroll over them.</p>
+      <p>This simple technique makes your site feel premium and professional.</p>
+      <p><strong>Try it on your site!</strong> Add <code>background-attachment: fixed;</code> to any section with a background image.</p>
+    </div>
+  </div>
+
+</body>
+</html>
