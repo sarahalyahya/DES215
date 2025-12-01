@@ -1,5 +1,5 @@
-/* Responsive imgs example */
-
+/* EXAMPLE 1: Responsive imgs  */
+/* HTML FILE: responsiveImgs.html */
 .container {
      width: 80%;
      max-width: 600px;
@@ -10,15 +10,20 @@
 
 
 
+/* You would want to apply this style to all your images!  */
+.good-image{
+  max-width: 100%; /* image is never wider than its container */
+  height: auto; /* maintains the aspect ratio if the width changes. It prevents squishing/stretching */
+  display: block;  /*images have a display mode inline by default. Making it block removes the werid spacing that comes with inline elements.*/
+
+}
 
 
+/* EXAMPLE 2: Hero page full image example */
+/* HTML FILE: fullPageHero.html */
 
 
-
-
-
-   
-/* Hero page example */
+/* This asterisk is a "universal selector", it selects ALL elements on a page.  */
 * {
   margin: 0;
   padding: 0;
@@ -31,57 +36,48 @@ body {
 
 
 
+.hero{
+ /* Applying a background with css, as you can see, we can layer elements. Here we have a gradient layer as a dark overlay above our photo. The layers are separated with commas.  */
+  background-image: 
+  linear-gradient(rgba(102,126,234,0.3),rgba(102,126,234,0.3)),
+  url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+  /* Different background img properties you can apply.  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* attachment fixed enables parallax scrolling effect.  */
+  background-attachment:fixed; 
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FULLPAGE HERO EXAMPLE */
-
-/* .hero-content {
+.hero-content {
       max-width: 800px;
     }
     
     .hero h1 {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       font-size: 4rem;
       margin-bottom: 1rem;
 
     }
     
     .hero p {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       font-size: 1.5rem;
       margin-bottom: 2rem;
       
     }
     
-    .cta-button {
+    .hero-cta-button {
       display: inline-block;
       padding: 1rem 3rem;
       background: white;
@@ -92,57 +88,107 @@ body {
       font-size: 1.1rem;
     }
     
-    .cta-button:hover {
+    .hero-cta-button:hover {
       background: #f0f0f0;
-    } */
+    }
 
 /* Content section to show parallax */
-/* .content {
+.hero-page-body {
       background: white;
       padding: 5rem 2rem;
     }
     
-    .content-inner {
+    .hero-body-inner{
       max-width: 800px;
       margin: 0 auto;
     }
     
-    .content h2 {
+    .hero-page-body h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: #333;
     }
     
-    .content p {
+    .hero-page-body p {
       font-size: 1.2rem;
       line-height: 1.8;
       color: #666;
       margin-bottom: 1rem;
-    } */
+    }
 
 
 
 
-/* VIDEO BACKGROUND EXAMPLE */
+/* EXAMPLE 3: VIDEO BACKGROUND EXAMPLE */
+/* HTML File: video.html */
+
+
+
+.video-container{
+  position: relative; /*Relative positioning makes it the reference point for any children elements inside it */
+  min-height: 100vh; /* Full viewport (window) height*/
+  overflow: hidden; /*video does not overflow outside of the container */
+}
+
+
+.video-bg{
+  position: absolute; /*  this means it will be positioned relative to its container, outside of the usual flow of elements on the page. */ 
+
+  /* top and left define the reference point for the video's position as the center of the container. 
+  Moving 50% from the top, and 50% from the left */
+  top: 50%;
+  left: 50%;
+
+  /* we move them back using transform:translate  */
+  transform: translate(-50%, -50%);
+  
+  /* At least full width and height.  */
+  min-width: 100%;
+  min-height: 100%; 
+  /* maintaining aspect ratio with automatic widths and heights.  */
+  width: auto;
+  height: auto;
+  /* video background is in layer -1 */
+  z-index: -1;
+}
+
 
 
 /* similar styling to content over image with the flex and so on. */
-/* .content {
+.content {
+  position: relative;  
 
-  position: relative;  */
+ /* content is in layer 1 */
+  z-index: 1;
 
-  /* layering, above video */
-  /* z-index: 1;
   min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
   color: white;
   text-align: center;
   padding: 2rem;
-} */
+}
 
-/* .content h1 {
+.video-overlay{
+  position: absolute; 
+  top: 0;
+  left: 0; 
+
+  width: 100%;
+  height: 100%; 
+  background: rgba(0,0,0,0.5);
+  /* overlay is in layer 0 */
+  z-index: 0;
+
+
+  /* so, the order of elements stacking based on z-index is the video, then the overlay, then the content on top. Layers -1,0,1. */
+}
+
+ .content h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
@@ -166,24 +212,28 @@ body {
 
 .btn:hover {
   background: #f0f0f0;
-} */
+} 
 
 
 
-/* IFRAME EXAMPLE */
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625 = 56.25%) */
-  height: 0;
+
+/* EXAMPLE 4: iframes
+HTML file: iframes.html */
+.iframe-container{
+  position: relative; 
+  height: 500px;
   overflow: hidden;
   max-width: 100%;
+
 }
 
-.video-wrapper iframe {
-  position: absolute;
+.iframe-container iframe{
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: 0; 
 }
+
+

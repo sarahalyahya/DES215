@@ -6,7 +6,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Regular Video with Controls</h1>
+
+
+
+  <!-- Everything is in the video container because we want to position and style it in reference to the container.  -->
+  <div class="video-container">
+    <div class="video-overlay"></div>
+    <div class="content">
+    <h1>Video Background Demo</h1>
+    <p>This is a video background</p>
+    <a href="#" class="btn">Learn More</a>
+    </div>
+    <!-- For background videos, you would usually include all these properties, autoplay, muted, loop, playsinline.  -->
+     <video class="video-bg" autoplay muted loop playsinline >
+    <source src="https://assets.mixkit.co/rbd7enl9gxmu82u1kf0em80maku1" >
+     Your browser doesn't support video
+  </video>
+
+  </div>
+ 
 
 </body>
 </html>
