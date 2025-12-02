@@ -18,13 +18,26 @@
       display: block;
       
     }
+
+    .combo-image{
+     filter: grayscale(80%) brightness(90%); 
+
+     transition: all 0.8s ease; 
+
+
+    }
     
+    .combo-image:hover{
+      filter: grayscale(0%) brightness(100%);
+      transform: translateY(-10px) scale(1.2) rotate(2deg); 
+      box-shadow: 0px 20px 50px rgba(0,0,0,0.3);
+    }
     
   </style>
 </head>
 <body>
   <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" 
        alt="Mountains" 
-       class="image">
+       class="image combo-image">
 </body>
 </html>

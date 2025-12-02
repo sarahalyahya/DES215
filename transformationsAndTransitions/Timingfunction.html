@@ -19,24 +19,60 @@
       align-items: center;
       justify-content: center;
       margin: 1rem 0;
+      margin-bottom: 3rem;
       font-size: 0.8rem;
+
+      transition: transform 2s ease; 
+
     }
     
+    .demo-box:hover{
+      transform: translateX(400px);
+    }
    
+    .linear{
+      transition: transform 2s linear;
+    }
+
+    .ease{
+      transition: transform 2s ease;
+    }
+
+    .ease-in{
+      transition: transform 2s ease-in;
+
+    }
+
+    .ease-out{
+      transition: transform 2s ease-out;
+
+    }
+
+    .ease-in-out{
+       transition: transform 2s ease-in-out;
+    }
+
     
     p {
       margin-top: 2rem;
       font-weight: bold;
+    }
+
+    img:hover{
+       transform: translateX(400px);
+
     }
   </style>
 </head>
 <body>
   <p>Hover over each box and see the difference:</p>
   
-  <div class="demo-box">linear</div>
-  <div class="demo-box">ease</div>
-  <div class="demo-box">ease-in</div>
-  <div class="demo-box">ease-out</div>
-  <div class="demo-box">ease-in-out</div>
+  <div class="demo-box linear">linear</div>
+  <div class="demo-box ease">ease</div>
+  <div class="demo-box ease-in">ease-in</div>
+  <div class="demo-box ease-out">ease-out</div>
+  <div class="demo-box ease-in-out">ease-in-out</div>
+
+  <img class="ease" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="">
 </body>
 </html>

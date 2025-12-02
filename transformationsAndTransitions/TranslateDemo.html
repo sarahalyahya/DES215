@@ -16,16 +16,24 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       display: block;
+      transition: transform 0.3s ease, box-shadow 0.5 ease-in;
       
+    }
 
+    .image:hover{
+      transform: translateY(-10px);
+      cursor: pointer; 
+      box-shadow: 0px 10px rgba(0,0,0,0.2); 
     }
     
-   
+
   </style>
 </head>
 <body>
   <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" 
        alt="Mountains" 
        class="image">
+
+      
 </body>
 </html>

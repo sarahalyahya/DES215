@@ -13,19 +13,22 @@
       padding: 1rem;
       margin: 2rem;
 
+      background: red;
+      transition: all 1s ease; 
    
     }
     
-    /* this overrides the above, because it is more specific */
-    .container .box {
-      background: red;
-    }
+    
 
-    .box:hover{
-      background: blue;
-      width: 300px;
+   .box:hover{
+    background: blue;
+    width: 300px;
+    box-shadow: 1px 6px rgba(0,0,0,0.5);
+   }
 
-    }
+
+    
+   
 
 
   </style>
@@ -34,8 +37,10 @@
 
   <div class="container">
     <div class="box">
-      Hello World
+      <p>Hello World </p>
     </div>
+
+    
   </div>
 
 </body>

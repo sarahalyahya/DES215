@@ -16,8 +16,24 @@
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       display: block;
+
+      filter:blur(7px);
+      transition: all 0.4s ease; 
+      
       
     }
+
+    .grayscale-image:hover{
+      filter: grayscale(100%) blur(7px) brightness(110%);
+      transform: scale(1.2);
+      cursor:pointer; 
+    }
+
+    .grayscale-image:active{
+      filter: blur(0px);
+
+    }
+
 
    
     
