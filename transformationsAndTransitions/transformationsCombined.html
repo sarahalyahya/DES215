@@ -27,7 +27,10 @@
 
     }
     
+    /* A combination of animations using transformations, filters, and box-shadow. */
     .combo-image:hover{
+      /* reminder here to include all the different values on the same line. so as u can see we have grayscale() then brightness() with space between them.  */
+      /* AND pay attention to the right units. As you can see the units. Some filters take percentage, others take pixels. Rotate takes degrees, scale doesn't take a unit..etc. */
       filter: grayscale(0%) brightness(100%);
       transform: translateY(-10px) scale(1.2) rotate(2deg); 
       box-shadow: 0px 20px 50px rgba(0,0,0,0.3);

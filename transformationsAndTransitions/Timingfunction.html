@@ -29,6 +29,10 @@
     .demo-box:hover{
       transform: translateX(400px);
     }
+
+    /* here we have the transitions in their own classes. So if i have any element where i want to animate the transform property using linear timing, 
+    i can just add the linear class to the html element, BUT you need to of course have a hover or another state using a psuedoclass (like what's above)
+    so there's actually something that's being animated. */
    
     .linear{
       transition: transform 2s linear;

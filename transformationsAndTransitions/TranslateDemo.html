@@ -16,14 +16,21 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       display: block;
-      transition: transform 0.3s ease, box-shadow 0.5 ease-in;
+
+      /* For every animation, there has to be a transition which is the bridge between the normal state, and the other state. In this case the other state is the hover state. 
+      We have two transitions here: one for the transformation (translating) which lasts 0.3s and uses the ease timing, and the other for the box-shado which lasts for 0.5s and uses the ease-in. */
+      transition: transform 0.3s ease, box-shadow 0.5s ease-in;
       
     }
 
+
+    /* Here, the animation is moving the image 10 pixels up (lifting it) upon hovering */
+    /* There also is a box-shadow animation, meaning a box-shadow appears when the user hovers. */
     .image:hover{
       transform: translateY(-10px);
-      cursor: pointer; 
       box-shadow: 0px 10px rgba(0,0,0,0.2); 
+      /* changing cursor mode to 'pointer' to indicate to user that they can click on the image. this is good to use for buttons and links.  */
+      cursor: pointer; 
     }
     
 

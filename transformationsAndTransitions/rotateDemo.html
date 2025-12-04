@@ -14,9 +14,14 @@
       width: 25rem;
       border-radius: 10px;
       display: block;
+
+      /* For every animation, there has to be a transition which is the bridge between the normal state, and the other state. 
+      In this case the other state is the hover state. */
       transition: transform 1s ease;
     }
     
+   /* Here, the animation is spinning the image*/
+   /* you can use negative degrees to spin counter-clockwise */
     .image:hover {
       transform: rotate(360deg);
     }

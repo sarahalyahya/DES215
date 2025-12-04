@@ -17,14 +17,18 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       display: block;
 
+      /* Remember if you're using css filters in animations, sometimes you need to define what the filters are in the starting state. 
+      In this case we define the blur here, because we want it to unblur when we hover.  */
       filter:blur(7px);
       transition: all 0.4s ease; 
       
       
     }
 
+    /* the animation turns the img grayscale, unblurs it and makes it brighter.  */
+    /* it also scales it up */
     .grayscale-image:hover{
-      filter: grayscale(100%) blur(7px) brightness(110%);
+      filter: grayscale(100%) blur(0px) brightness(110%);
       transform: scale(1.2);
       cursor:pointer; 
     }

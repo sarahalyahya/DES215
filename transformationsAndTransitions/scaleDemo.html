@@ -17,8 +17,11 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       display: block;
 
+       /* For every animation, there has to be a transition which is the bridge between the normal state, and the other state. In this case the other state is the hover state. */
       transition: transform 0.3s ease; 
     }
+
+    /* Here, the animation is growing the image by 20%*/
 
     .image:hover{
       transform: scale(1.2); 
