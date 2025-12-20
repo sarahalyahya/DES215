@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* main content */
+.content {
+  padding: 5rem 2rem 2rem 2rem;
+
+  max-width: 1200px;
+}
+
+
