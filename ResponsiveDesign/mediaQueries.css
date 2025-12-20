@@ -1,0 +1,54 @@
+
+/* The general css styles that we are used to */
+body{
+    background: lightblue;
+
+}
+
+h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/* Here, we are setting our exceptions to the styling through media queries. */
+
+/* 1. we start by defining our rule. The rule here, when the screen is 1023px or smaller */
+@media (max-width: 1023px){
+
+/* 2. Then, inside, we determine the styles specific to this rule. So when the screen is in the >1023px range, we want to have the following styles: */
+    body{
+        background: lightgreen;
+    
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Here, we are setting another rule, for screens 767px or less. So now we have multiple different breakpoints. 
+We have styles specific to screens from 0-767px, styles specific for 768-1023px, and then general styles for bigger screens.  */
+@media (max-width: 767px){
+
+    body{
+        background: rgb(242, 242, 124);
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
+
+/* Remember, your media queries are styling exceptions. So always always always have them at the end of your code.  */

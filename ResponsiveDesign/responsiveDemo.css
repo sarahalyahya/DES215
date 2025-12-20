@@ -30,6 +30,10 @@ nav a {
     border-radius: 5px;
 } 
 
+nav{
+    display: flex;
+    gap: 1rem;
+}
 
 
 /* hero section styling */
@@ -47,5 +51,57 @@ nav a {
 }
 
 
+
+.cards{
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+
+    padding: 3rem 2rem;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card{
+    background-color: #f4f4f4; 
+    padding: 2rem; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+@media (max-width:767px){
+
+    /* For smaller screens, we want the flex direction to become a column instead of a row, since we have more vertical space than horizontal space. */
+    nav{
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .hero{
+        padding: 2rem 1rem;
+    }
+
+    /* making the font-size a bit smaller for smaller screens */
+    .hero h2{
+        font-size: 1.75rem;
+    }
+
+    /* 1 column grid for smaller screens. */
+    .cards{
+        grid-template-columns: 1fr; 
+        padding: 2rem 1rem; 
+    }
+}
+
+/* two column grid for tablet-size screens.  */
+@media (min-width: 768px) and (max-width: 1023px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 

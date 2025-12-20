@@ -1,1 +1,44 @@
 
+/* Responsive images */
+img{
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+/* using min and max instead of absolute heights */
+.section{
+    min-height: 400px; 
+}
+
+.card-container{
+    display: flex; 
+    gap:1rem;
+    flex-wrap: wrap; /*this tells the browser to start a new row/col whenever needed */
+}
+
+.card{
+    background-color: lightblue;
+    padding: 2rem;
+    border-radius: 8px;
+    flex-grow: 1; /*tells the browser cards can expand BEYOND 300px if there's space available, so they will grow proportionally to fill the container*/
+    flex-shrink:1; /*tells the browser cards can shrink BELOW 300px if the container is too narrow, so they'll compress rather than overflow or force the user to scroll horizontally */
+    flex-basis: 300px; /*this sets the ideal/ preferred width before any growing or shrinking happens*/
+}
+
+.grid-item{
+    background-color: coral;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.grid-container{
+    display: grid; 
+    /*with this one line, you tell the browser:
+    1. repeat --> repeat columns
+    2. "auto-fit" to fit as many columns as possible in the space provided
+    3. minmax(200px,1fr): but please make sure each column is at leaast 250px, and can grow up to 1fr*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
