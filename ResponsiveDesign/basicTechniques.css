@@ -1,5 +1,11 @@
 
 /* Responsive images */
+.img-container{
+    max-width: 60%;
+    padding: 3rem;
+
+}
+
 img{
     max-width: 100%; 
     height: auto; 
