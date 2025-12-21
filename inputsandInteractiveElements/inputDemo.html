@@ -10,18 +10,45 @@
      <h1>Different Input Types</h1>
   
 <!-- text input -->
- 
-  
-<!-- checkboxes -->
- 
-<!-- radio buttons -->
- 
+ <div class="demo">
+     <input type="text" placeholder="Enter your name">
+ </div>
 
 
-<!-- labels -->
+ <!-- checkbox input -->
+   <div class="demo">
+     <input type="checkbox"> Check this!
+ </div>
+
+
+ <!-- Radio buttons -->
+  <div class="demo">
+     <input type="radio" name="size"> Small
+     <input type="radio" name="size"> Medium
+     <input type="radio" name="size"> Large
+ </div>
+
+
+<!-- without label -->
+ <h3>Without label, you can only click on the checkbox</h3>
+ <input type="checkbox"> Check me!
+  <br>
+  <!-- with label -->
+<h3>With label, , you can click on the label as an extension of the checkbox</h3>
+ <input type="checkbox" id="check">
+ <label for="check"> I agree!</label>
+
 
 
 <!-- checkbox states -->
+
+<!-- parent -->
+<div class="demo"> 
+    <h3>CSS Detects Checkbox States</h3> <!-- sibling 1 -->
+    <input type="checkbox" id="demo-check"> <!-- sibling 2 -->
+    <label for="demo-check"> Check me!</label> <!-- sibling 3 -->
+    <p class="message"> I appear when checked!</p> <!-- sibling 4 -->
+</div>
 
 
 </body>

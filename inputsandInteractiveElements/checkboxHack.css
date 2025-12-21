@@ -1,0 +1,31 @@
+#toggle{
+    /* step 1: hide the checkbox */
+    display: none;
+}
+
+.toggle-button{
+    /* step 2: style the label as a button */
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.toggle-button:hover{
+    background: rgb(29, 93, 115);
+}
+
+.hidden-content{
+    /* step 3: style the hidden content, and hide it with display: none; */
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: beige;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Use this selector to specify what we want our hidden checkbox to toggle.  */
+#toggle:checked ~ .hidden-content{
+    display: block; 
+}

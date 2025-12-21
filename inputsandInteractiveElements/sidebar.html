@@ -8,7 +8,28 @@
 </head>
 <body>
 
- 
+  <!-- Step 1: create the checkbox (that will be hidden) -->
+  <input type="checkbox" id="sidebar-toggle">
+
+  <!-- Step 2: create the label that will be styled for clicking -->
+ <label for="sidebar-toggle" class="toggle-btn">Menu</label>
+
+ <!-- step 3: create the content which will be hidden initially -->
+  <aside class="sidebar">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Messages</a></li>
+    </ul>
+  </aside>
+
+  <!-- This content will be unaffected by the checkbox hack -->
+  <main class="content">
+    <h1>Main Content Area</h1>
+    <p>click the menu button to expand the sidebar</p>
+  </main>
 
 </body>
 </html>

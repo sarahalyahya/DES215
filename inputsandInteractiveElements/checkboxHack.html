@@ -8,7 +8,26 @@
 </head>
 <body>
   <h1>The Checkbox Hack</h1>
-  
+  <!-- The checkbox hack is using the checkbox input method, and hiding the actual box, to create an interaction on the webpage. 
+   Usually, it's an interaction that's based on toggling (on and off -- turning on a display, sliding in a side bar, displaying a hamburger menu...)  -->
+
+  <!-- I will have everything in a container -->
+   <div class="toggle-container">
+    <!-- step 1: checkbox -->
+     <input type="checkbox" id="toggle">
+
+     <!-- step 2: the label (we will turn this into our button, since we can click on labels)  -->
+      <label for="toggle" class="toggle-button">Show content</label>
+
+      <!-- step 3: the content we want to show or hide -->
+       <div class="hidden-content">
+        <h3>Hidden Content</h3>
+       <p>This content appears when you click the button</p>
+       <p>Click again to hide it</p>
+       </div>
+      
+
+   </div>
  
 
 </body>

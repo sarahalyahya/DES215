@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="hamburgerMenu.css">
 </head>
 <body>
+<nav>
+  <!-- To see the checkbox hack in action, this example specifically works on mobile. 
+  It shows the hamburger menu when the screen size is small, and expands the menu there.  -->
+  <!-- step 1: hidden checkbox to store state -->
+   <input type="checkbox" id="menu-toggle">
 
+   <!-- step 2: create a label that becomes the clickable button -->
+   <label for="menu-toggle" class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#8C1A10"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></label>
+ 
+   <!-- step 3: create the content that will be hidden by default -->
+   <ul class="menu">
+    <li> <a href="#">Home</a></li>
+    <li> <a href="#">About</a></li>
+    <li> <a href="#">Services</a></li>
+   <li> <a href="#">Contact</a></li>
+   </ul>
+</nav>
+
+<h2>Welcome to my website</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit doloremque laborum amet dolorum nulla odio rem repellendus in asperiores? Vel ut omnis dolore quos facere atque, excepturi blanditiis totam inventore? Nulla, dignissimos? Totam ex dolore debitis voluptas reiciendis! Architecto, illo iure velit doloremque atque recusandae magni alias sequi voluptatibus?</p>
 
 
 

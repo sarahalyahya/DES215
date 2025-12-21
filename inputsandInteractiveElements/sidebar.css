@@ -1,13 +1,75 @@
 *{
-  margin: 0;
+
   padding: 0;
 }
 
-/* main content */
+/* main content, unaffected by the checkbox */
 .content {
   padding: 5rem 2rem 2rem 2rem;
-
   max-width: 1200px;
 }
 
+/* hiding the checkbox */
+#sidebar-toggle{
+  display:none;
+}
 
+/* positioning and styling the label as a button */
+.toggle-btn{
+  position: fixed;
+  top: 1rem;
+  left: 1rem; 
+  background: #333;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+/* styling the sidebar, and positioning off the screen by using left: -250px, later when we use the checkbox trick, 
+we will position it back on the screen, to create the effect of sliding in */
+.sidebar{
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 2rem 1rem;
+  height: 100vh;
+
+  /* default position, off screen */
+  position: fixed;
+  top: 0;
+  left: -290px;
+  z-index: 50; 
+
+  /* adding a transition to create a smooth slide in */
+  transition: left 0.3s ease;
+}
+
+/* this is the animate line...moving the sidebar on screen by adding 250 px to the left, making left = 0 */
+#sidebar-toggle:checked ~ .sidebar{
+  left: 0; 
+
+}
+
+
+.sidebar h3{
+  margin-top: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+.sidebar ul{
+  list-style: none;
+}
+
+.sidebar a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover{
+  background: rgba(255,255,255,0.1);
+  padding-left: 0.5rem;
+}

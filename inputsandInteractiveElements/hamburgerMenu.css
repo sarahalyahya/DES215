@@ -1,0 +1,59 @@
+
+nav{
+    background: #929292;
+    padding: 1rem;
+}
+
+/* Step 1: hide the checkbox */
+#menu-toggle{
+    display: none;
+}
+
+
+/* Styling the normal nav bar for desktop display */
+.menu{
+    list-style: none;
+    display: flex; 
+    flex-direction: row;
+    gap: 1.5rem; 
+    justify-content: center;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* hiding the hamburger menu label / icon, which we will show for mobile only */
+.hamburger{
+    display: none;
+}
+
+
+/* Our media query, where we will define the rest of the steps of our checkbox interaction.  */
+@media (max-width: 768px){
+
+    /* showing our input label, which is the hamburger menu icon */
+    .hamburger{
+        display: flex; 
+    }
+
+    /* Styling the menu how we want it to look on phone, and then giving it display:none to hide it by default.  */
+    .menu{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        display: none;
+
+    }
+
+    /* Using the state and sibling selector to display the menu when we check the checkbox (or click the label) */
+    #menu-toggle:checked ~ .menu{
+        display: flex;
+      
+    }
+
+    
+}
