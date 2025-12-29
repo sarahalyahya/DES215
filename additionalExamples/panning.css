@@ -36,7 +36,7 @@
       padding: 2rem;
 
 /* We want to display the images in a grid, but because we have such a large width, we cannot determine how many columns we really need. 
-    So we can use the responsive grid, but it's better to experiment with your min and max based on how many images u want in a row.  */
+    So we can use the responsive grid, but it's better to experiment with your min and max based on how many images u want in a row. You can also play around with the gap to see what you want to have. */
       display: grid;
       grid-template-columns: repeat( auto-fit, minmax(16rem, 1fr));
       gap: 1.5rem;
