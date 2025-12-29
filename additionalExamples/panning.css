@@ -1,0 +1,65 @@
+  body {
+      margin: 0;
+      background: #111;
+   
+    }
+
+
+
+    /* This is the visible window, what you see at any moment within the bounds of your screen */
+    .viewport {
+    /* full width and height*/
+      width: 100vw;
+      height: 100vh;
+
+    /* Below, you're telling the browser that if content overflows, you can deal with it by enabling scrolling, 
+    and you define the scrolling behavior as smooth here  */
+      overflow: scroll;
+      scroll-behavior: smooth;
+      /* The lines below are the lines that hide the scrollbars from various browsers */
+      scrollbar-width: none;      
+      -ms-overflow-style: none;     
+     
+    }
+
+    .viewport::-webkit-scrollbar {
+      display: none;                
+    }
+    
+
+    
+
+    /* The canvas is the big area you pan around */
+    .canvas {
+      width: 140vw;          /* Making it wide enough to pan on a standard screen, but not infinite */
+      min-height: 140vh;     /* creates vertical space */
+      padding: 2rem;
+
+/* We want to display the images in a grid, but because we have such a large width, we cannot determine how many columns we really need. 
+    So we can use the responsive grid, but it's better to experiment with your min and max based on how many images u want in a row.  */
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(16rem, 1fr));
+      gap: 1.5rem;
+    }
+
+
+    /*Basic image container styling */
+    .card {
+      background: #222;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+
+
+    /* This is an easy way to make the grid look disorderly and a bit random. Defining different image heights as classes, and then in your html, based on the size you want 
+    to give your image card you can apply the corresponding class */
+    .small  { height: 12rem; }
+    .medium { height: 18rem; }
+    .large  { height: 24rem; }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
