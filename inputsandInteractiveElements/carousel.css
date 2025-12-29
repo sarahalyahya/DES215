@@ -9,6 +9,8 @@ body {
   padding: 2rem;
 }
 
+/* Img responsiveness */
+
 img {
   width: 100%;
   height: auto;
@@ -16,3 +18,97 @@ img {
 }
 
 
+/* position relative to place the carousel element in its own, new "positioning context". 
+Any children inside the carousel with position:absolute will be positioned relative to it.*/
+.carousel{
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    overflow: hidden;  /* This makes sure that we only see 100% of our 300% container */
+    border: 2px solid #333;
+}
+
+
+.carousel input[type="radio"]{ /*The part in square brackets [] ensures that only inputs of the type "radio" get this styling */
+    display: none;
+}
+
+
+.slides{
+    display: flex;
+    flex-direction: row;
+    width: 300%; /* the slides container is 3 times the width of the visible carousel. Each slide is 100%, takes up the whole screen!*/
+    transition: all 0.5s ease;  /*was previously not working because I was missing the 's' for seconds :) */
+
+
+    /* uncomment the line below if you want to use the keyframe animation defined at the end. */
+    /* animation: autoSlide 9s infinite;  */
+}
+    
+    
+.slide{
+    width: 33.333%; /*Each slide is 1/3rd of the slides container, so 100/3 = 33.3333% */
+    min-height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+
+/* Here, we're applying the "animated" change using the sibling selector. With each carousel click, we translate -33.333% more to show the next slide */
+#slide1:checked ~ .slides{
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides{
+    transform: translateX(-33.3333%);
+
+}
+
+#slide3:checked ~ .slides{
+    transform: translateX(-66.66666%);
+
+}
+
+
+/* And here, we are styling our labels as the small dots at the bottom of our carousel */
+.dot{ 
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 50%; 
+}
+
+.navigation{
+    position: absolute; 
+    bottom: 1rem;
+    left: 50%; 
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+/*if we want the slides to change automatically, we can use 'keyframe animations' */
+
+@keyframes autoSlide {
+    0%{
+        transform: translate(0%);
+    
+    }
+
+    33.33%{
+        transform: translate(-33.333%);
+    
+    }
+
+    100%{
+        transform: translate(-66.666%);
+    
+    }
+
+    
+   
+}
