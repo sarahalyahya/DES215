@@ -95,17 +95,17 @@ Any children inside the carousel with position:absolute will be positioned relat
 
 @keyframes autoSlide {
     0%{
-        transform: translate(0%);
+        transform: translateX(0%);
     
     }
 
   50%{
-        transform: translate(-33.333%);
+        transform: translateX(-33.333%);
     
     }
 
     100%{
-        transform: translate(-66.666%);
+        transform: translateX(-66.666%);
     
     }
 

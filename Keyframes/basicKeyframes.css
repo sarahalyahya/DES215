@@ -1,12 +1,67 @@
 
-
 .card{
   background: beige;
   padding: 1rem;
   margin-left: 3rem;
   width: 30%;
   border-radius: 9px;
+  animation: slideIn 3s ease, fadeIn 4s ease infinite;
+  animation-delay: 1s;
   
+}
+
+.card2{
+
+  background: beige;
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  width: 30%;
+  border-radius: 9px;
+  animation: pulse 1s ease infinite; 
 
 }
 
+.fade-in{
+  animation: fadeIn 2s ease;
+  animation-iteration-count: infinite;
+  animation-delay: 1s; 
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 1; 
+  }
+
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1; 
+  }
+}
+
+@keyframes slideIn{
+  0%{
+    transform: translateX(-100%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes pulse{
+  0%{ 
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.2);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+
+}
