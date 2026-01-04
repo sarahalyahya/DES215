@@ -43,7 +43,7 @@ Any children inside the carousel with position:absolute will be positioned relat
 
 
     /* uncomment the line below if you want to use the keyframe animation defined at the end. */
-    /* animation: autoSlide 9s infinite;  */
+    animation: autoSlide 9s infinite; 
 }
     
     
@@ -99,7 +99,7 @@ Any children inside the carousel with position:absolute will be positioned relat
     
     }
 
-   50%{
+  50%{
         transform: translate(-33.333%);
     
     }
